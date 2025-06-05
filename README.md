@@ -1,4 +1,4 @@
-# 📁 Project: `rahulgaurr-contact-manager`
+# 📁 Project: `Contact Manager`
 
 A full-stack **Contact Manager web application** built with a React frontend and Node.js + Express backend. The app allows users to register, log in, and manage their personal contacts securely, using JWT-based authentication. MongoDB is used as the database.
 
