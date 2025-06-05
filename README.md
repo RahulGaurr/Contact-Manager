@@ -16,12 +16,14 @@ A full-stack **Contact Manager web application** built with a React frontend and
 ## 📂 Project Structure
 
 
+
 rahulgaurr-contact-manager/
 ├── client/       → Frontend React app
 └── server/       → Backend Express API
 
 
 ---
+
 
 ## 🧩 Key Features
 
