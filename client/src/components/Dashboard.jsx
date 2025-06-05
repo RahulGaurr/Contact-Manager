@@ -4,7 +4,7 @@ import { jwtDecode } from "jwt-decode";
 import { AuthContext } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = '/api';
 
 function Dashboard() {
   const [contacts, setContacts] = useState([]);
