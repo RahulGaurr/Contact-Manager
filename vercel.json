@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "client/dist/**/*",
+      "src": "client/build/**/*",
       "use": "@vercel/static"
     },
     {
@@ -17,9 +17,12 @@
     },
     {
       "src": "/(.*)",
-      "dest": "client/dist/$1"
+      "dest": "client/build/$1"
     }
   ],
   "buildCommand": "cd client && npm install && npm run build",
-  "outputDirectory": "client/dist"
+  "outputDirectory": "client/build",
+  "engines": {
+    "node": "18.x"
+  }
 }
