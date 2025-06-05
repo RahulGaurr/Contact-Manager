@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 app.use(express.json())
 const corsOptions = {
-  origin: process.env.NODE_ENV === 'production' ? 'https://contact-manager.vercel.app' : 'http://localhost:5173',
+  origin: process.env.NODE_ENV === 'production' ? 'https://contact-manager-xi-five.vercel.app' : 'http://localhost:5173',
   credentials: true,
 };
 app.use(cors(corsOptions));
