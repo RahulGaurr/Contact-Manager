@@ -13,11 +13,11 @@ const port = process.env.PORT || 5000;
 // CORS configuration
 app.use(cors({
   origin: process.env.NODE_ENV === "production" 
-    ? "https://contact-manager-xi-five.vercel.app" 
-    : "http://localhost:5173",
+    ? process.env.VERCEL_URL || "https://contact-manager-xi-five.vercel.app" 
+    : "http://localhost:5173", // Vite default port
   credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Explicitly allow methods
-  allowedHeaders: ["Content-Type", "Authorization"] // Allow necessary headers
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 // Middleware
