@@ -20,11 +20,7 @@
       "dest": "client/dist/$1"
     }
   ],
-  "buildCommand": "cd client && npm install && npm run build",
-  "outputDirectory": "client/dist",
-  "engines": {
-    "node": "18.x"
-  },
+ 
   "env": {
     "NODE_ENV": "production"
   }
