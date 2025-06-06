@@ -21,8 +21,6 @@
     }
   ],
   "buildCommand": "cd client && npm install && npm run build",
-  "outputDirectory": "client/build",
-  "engines": {
-    "node": "18.x"
-  }
+  "outputDirectory": "client/build"
+  
 }
