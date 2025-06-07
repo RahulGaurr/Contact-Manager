@@ -4,7 +4,7 @@ import { jwtDecode } from "jwt-decode";
 import { AuthContext } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://your-render-backend.onrender.com/api';
+const API_URL = import.meta.env.VITEDEV_API_URL || 'https://contact-manager-87bf.onrender.com/api';
 
 function Dashboard() {
   const [contacts, setContacts] = useState([]);

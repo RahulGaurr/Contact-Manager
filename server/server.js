@@ -13,7 +13,7 @@ const port = process.env.PORT || 5000;
 app.use(cors({
   origin: [
     "http://localhost:5173", // Vite dev server
-    "https://contact-manager-ashy-sigma.vercel.app/" // Vercel frontend
+    "https://contact-manager-ashy-sigma.vercel.app" // Vercel frontend
   ],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
