@@ -7,6 +7,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
+    
     <AuthProvider>
       <Routes>
         <Route path="/login" element={<Login />} />

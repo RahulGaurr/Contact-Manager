@@ -20,14 +20,18 @@ function Dashboard() {
 
   useEffect(() => {
 
-    // Decode username from token to display beside logout button
-    if (user?.token) {
-      try {
-        const decoded = jwtDecode(user.token);
-        setUsername(decoded.user?.username || '');
-      } catch (err) {
-        setUsername('');
-      }
+    if (!user?.token) {
+      navigate('/login', { replace: true });
+      return;
+    }
+ // Decode username from token to display beside logout button
+    try {
+      const decoded = jwtDecode(user.token);
+      setUsername(decoded.user?.username || '');
+    } catch (err) {
+      logout();
+      navigate('/login', { replace: true });
+      return;
     }
     // or fetch username from /api/users/current endpoint
         // const userResponse = await axios.get(`${API_URL}/users/current`, {

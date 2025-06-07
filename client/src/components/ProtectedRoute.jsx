@@ -1,30 +1,16 @@
-
-
-// const ProtectedRoute = () => {
-//   return (
-//     <div>ProtectedRoute</div>
-//   )
-// }
-
-// export default ProtectedRoute
-
-
-
 import { useContext, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthContext';
 
 function ProtectedRoute({ children }) {
   const { user } = useContext(AuthContext);
-  const navigate = useNavigate();
+ 
 
-  useEffect(() => {
-    if (!user) {
-      navigate('/login');
-    }
-  }, [user, navigate]);
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
 
-  return user ? children : null;
+  return children;
 }
 
 export default ProtectedRoute;
