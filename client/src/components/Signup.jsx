@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../contexts/AuthContext";
 
-const API_URL = '/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://your-render-backend.onrender.com/api';
 
 const Signup = () => {
   const [username, setUsername] = useState('');
