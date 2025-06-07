@@ -29,7 +29,7 @@ const Login = () => {
   return (
     <div className="container max-w-7xl mx-auto min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-blue-700">Login</h2>
         {error && <p className="text-red-500 mb-4">{error}</p>}
         <div className="space-y-4">
           <input
