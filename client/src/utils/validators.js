@@ -37,6 +37,6 @@ export const validatePassword = createValidator(
 );
 
 export const validatePhone = (phone) => {
-  if (!phone) return ''; // Optional
+  if (!phone) return ''; 
   return /^\d{10,15}$/.test(phone) ? '' : 'Phone must be 10-15 digits';
 };

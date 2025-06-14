@@ -53,6 +53,23 @@ const validateUser = (req, res, next) => {
   next();
 };
 
+const validateLogin = (req, res, next) => {
+  const { email, password } = req.body;
+  const errors = {
+    ...(validateEmail(email) && { email: validateEmail(email) }),
+    ...(validatePassword(password) && { password: validatePassword(password) }),
+  };
+
+  if (Object.keys(errors).length > 0) {
+    res.status(constants.VALIDATION_ERROR);
+    return next(new Error(JSON.stringify(errors)));
+  }
+
+  next();
+};
+
+
+
 // Validate Contact Form Payload
 const validateContact = (req, res, next) => {
   const { name, email, phone } = req.body;
@@ -71,6 +88,7 @@ const validateContact = (req, res, next) => {
 };
 
 module.exports = {
+  validateLogin,
   validateUser,
   validateContact,
 };
