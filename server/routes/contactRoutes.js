@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const validateToken = require("../middleware/validateTokenHandler");
-
+const { validateContact } = require("../middleware/validate");
 const {
   getContacts,
   createContact,
@@ -12,7 +12,7 @@ const {
 
 
 router.use(validateToken)
-router.route("/").get(getContacts).post(createContact);
-router.route("/:id").get(getContact).put(updateContact).delete(deleteContact);
+router.route("/").get(getContacts).post(validateContact,createContact);
+router.route("/:id").get(getContact).put(validateContact,updateContact).delete(deleteContact);
 
 module.exports = router;
