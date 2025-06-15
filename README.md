@@ -1,51 +1,17 @@
-# 📁 Project: `Contact Manager`
+# Contact Manager
 
-A full-stack **Contact Manager web application** built with a React frontend and Node.js + Express backend. The app allows users to register, log in, and manage their personal contacts securely, using JWT-based authentication. MongoDB is used as the database.
+A full-stack contact management application built with React and Node.js. The application allows users to manage their contacts with features like user authentication, contact creation, updating, and deletion.
 
----
+## Features
+- User authentication (signup and login)
+- Create, read, update, and delete (CRUD) operations for contacts
+- Protected routes for authenticated users
+- Input validation and error handling
+- Debounced search functionality for better performance
+- Responsive frontend with React components
 
-## 🔧 Tech Stack
-
-- **Frontend**: React, Vite, JSX, Tailwind/Custom CSS  
-- **Backend**: Node.js, Express, MongoDB, Mongoose  
-- **Auth**: JWT, Protected Routes, React Context  
-- **Tooling**: ESLint, Git, GitHub
-
----
-
-## 📂 Project Structure
-
-
-```plaintext
-rahulgaurr-contact-manager/
-├── client/       → Frontend React app
-└── server/       → Backend Express API
-```
-
----
-
-
-## 🧩 Key Features
-
-### Frontend (`client/`)
-- Built with **React + Vite**
-- Components for `Login`, `Signup`, `Dashboard`, and `ProtectedRoute`
-- `AuthContext` manages user auth globally
-- Clean structure with `assets`, `components`, `contexts`, and styles
-
-### Backend (`server/`)
-- RESTful API with **CRUD operations** for contacts
-- User authentication with **JWT**
-- Custom **middleware** for error handling and token validation
-- Organized code in folders: `controllers`, `models`, `routes`, `middleware`, `config`
-
----
-
-## 📌 Example Routes
-
-- `POST /api/users/register` – Register user  
-- `POST /api/users/login` – Authenticate user  
-- `GET /api/contacts/` – Get all contacts (protected)  
-- `POST /api/contacts/` – Add a contact  
-
-
+## Tech Stack
+- **Frontend**: React, Vite, Tailwind CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (configured in `server/config/dbConnection.js`)
+- **Others**: ESLint for linting, Vercel for deployment, JWT for authentication
