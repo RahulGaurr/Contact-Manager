@@ -1,4 +1,5 @@
 Contact Manager 📋✨
+
 A full-stack contact management app built with React and Node.js! 🚀 Manage your contacts with ease, featuring user authentication, CRUD operations, and a sleek UI. 😎
 
 Table of Contents 📑
@@ -28,6 +29,7 @@ Database: MongoDB 🍃 (server/config/dbConnection.js)
 Others: ESLint 📏, Vercel 🚀, JWT 🔑
 
 Directory Structure 📂
+
 rahulgaurr-contact-manager/
 ├── README.md 📄
 ├── client/ 🌐
